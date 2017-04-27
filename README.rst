@@ -36,8 +36,9 @@ To use (with caution), simply do::
 			   [26.7, 27.2, 29.9, 28.5, 29.4, 28.3]]
     >>> dfObs = sb.CreateAnovaDataFrame(labels, data)
     >>> sb.AnovaOneWay(dfObs)
-	![Anova1](/examples/Anova1.png)
-	![Anova2](examples/Anova2.png)
+
+![Anova1](statsbasic/examples/Anova1.png)
+![Anova2](/statsbasic/examples/Anova2.png)
 
 
 
