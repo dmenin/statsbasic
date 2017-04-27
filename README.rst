@@ -27,6 +27,11 @@ There is also a good chance that the functions are not 100% complete because Iâ€
 	AnovaOneWay(dfObs)
 
 
+![Anova1](statsbasic/examples/Anova1.png)
+![Anova2](/statsbasic/examples/Anova2.png)
+
+	
+	
 To use (with caution), simply do::
 
     >>> import statsbasic as sb
@@ -37,8 +42,7 @@ To use (with caution), simply do::
     >>> dfObs = sb.CreateAnovaDataFrame(labels, data)
     >>> sb.AnovaOneWay(dfObs)
 
-![Anova1](statsbasic/examples/Anova1.png)
-![Anova2](/statsbasic/examples/Anova2.png)
+
 
 
 
