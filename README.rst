@@ -28,6 +28,7 @@ There is also a good chance that the functions are not 100% complete because Iâ€
 
 
 ![Anova1](statsbasic/examples/Anova1.png)
+
 ![Anova2](/statsbasic/examples/Anova2.png)
 
 	
