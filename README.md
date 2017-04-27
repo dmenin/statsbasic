@@ -10,12 +10,16 @@ There is also a good chance that the functions are not 100% complete because Iâ€
 ### ANOVA:
 
     >>> import statsbasic as sb
-    >>> labels = ['Brown', 'Green', 'Blue']
-    >>> data =[[26.8, 26.9, 23.7, 25.0, 26.3, 24.8],
-			   [26.4, 24.2, 28.0, 26.9, 29.1, 26.9],       
-			   [26.7, 27.2, 29.9, 28.5, 29.4, 28.3]]
+    >>> labels = ['lab1', 'lab2', 'lab3', 'lab4']
+    >>> data =[[4.9, 5.7, 5.1, 5.3, 5.4, 5.5],
+    >>>        [5.4, 5.5, 4.8, 4.9, 5.2, 5.4],
+    >>>        [5.8, 6.0, 6.0, 5.5, 5.9, 5.8],
+    >>>        [4.5, 4.9, 4.7, 4.7, 4.4, 4.8]]
     >>> dfObs = sb.CreateAnovaDataFrame(labels, data)
     >>> sb.AnovaOneWay(dfObs)
+    >>> stats.f_oneway(data[0],data[1],data[2],data[3])
+
+	
 
 ![Anova1](/statsbasic/examples/Anova1.png)
 ![Anova2](/statsbasic/examples/Anova2.png)

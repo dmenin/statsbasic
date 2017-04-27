@@ -1,3 +1,5 @@
+#import statsbasic as sb
+#from scipy import stats
 #Examples:
 #####################################T_test_OneSample
 
@@ -94,7 +96,7 @@
 
 
 ##Ex 6 pag43
-#T_test_TwoInDependentSamples(xbar_A = 75.509, xbar_B= 78.373, StDev_A= 2.054, StDev_B= 1.635, nA =11, nB =11, alpha = 0.05, tail='two')
+sb.T_test_TwoInDependentSamples(xbar_A = 75.509, xbar_B= 78.373, StDev_A= 2.054, StDev_B= 1.635, nA =11, nB =11, alpha = 0.05, tail='two')
 #
 ##2.4.1 pag 48
 #T_test_TwoInDependentSamples(xbar_A = 25.32, xbar_B= 31.96, StDev_A= 13.78, StDev_B= 12.05, nA = 25, nB = 25, alpha = 0.05, tail='two')
@@ -178,8 +180,8 @@
 #    ['Never heard ',36,45, 54]
 #])
 #dfObs = pd.DataFrame(data=data[1:,1:], index=data[1:,0], columns=data[0,1:]).apply(pd.to_numeric,axis=0)
-#ChiSquare_test(dfObs, debug=True)
-#
+#sb.ChiSquare_test(dfObs, debug=True)
+##
 #
 ##Example 11: Literary Style - pag 40
 #data = np.array([
@@ -236,20 +238,25 @@
 #       [5.8, 6.0, 6.0, 5.5, 5.9, 5.8],
 #       [4.5, 4.9, 4.7, 4.7, 4.4, 4.8]]
 #
-#dfObs = CreateAnovaDataFrame(labels, data)
-#stats.f_oneway(data[0],data[1],data[2],data[3])
+#dfObs = sb.CreateAnovaDataFrame(labels, data)
+#sb.AnovaOneWay(dfObs)
 #
-#AnovaOneWay(dfObs)
+##SAME TEST FROM SCIPY
+#from scipy import stats
+#stats.f_oneway(data[0],data[1],data[2],data[3])
+
+
 #
 #
 ##Exercise 5.1.1 Iris - pag 17
+#import statsbasic as sb
 #labels = ['Brown', 'Green', 'Blue']
 #data =[[26.8, 26.9, 23.7, 25.0, 26.3, 24.8],
 #       [26.4, 24.2, 28.0, 26.9, 29.1, 26.9],       
 #       [26.7, 27.2, 29.9, 28.5, 29.4, 28.3]]
 #
-#dfObs = CreateAnovaDataFrame(labels, data)
-#AnovaOneWay(dfObs)
+#dfObs = sb.CreateAnovaDataFrame(labels, data)
+#sb.AnovaOneWay(dfObs)
 #
 #
 #
