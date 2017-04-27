@@ -1,4 +1,4 @@
-# Stast basic
+#Stast basic
 
 This is a module I developed to better understand the internal calculations on the basic statistical tests.
 The functions  output a lot of text, but thatâ€™s because learning is the goal here so I wanted to keep track of each step.
@@ -29,10 +29,24 @@ There is also a good chance that the functions are not 100% complete because Iâ€
 
 To use (with caution), simply do::
 
-    >>> import statsbasic as sdt
-    >>> sdt.T_test_OneSample(2.9, 2.6, 0.4, 36, 0.05)
+    >>> import statsbasic as sb
+    >>> labels = ['Brown', 'Green', 'Blue']
+    >>> data =[[26.8, 26.9, 23.7, 25.0, 26.3, 24.8],
+			   [26.4, 24.2, 28.0, 26.9, 29.1, 26.9],       
+			   [26.7, 27.2, 29.9, 28.5, 29.4, 28.3]]
+    >>> dfObs = sb.CreateAnovaDataFrame(labels, data)
+    >>> sb.AnovaOneWay(dfObs)
+	![Anova1](/examples/Anova1.png)
+	![Anova2](examples/Anova2.png)
+
+
+
+
+	
+    >>> import statsbasic as sb
+    >>> sb.T_test_OneSample(2.9, 2.6, 0.4, 36, 0.05)
 	>>> SE(xbar): 0.067
 	>>> t statistic: -4.5
 	>>> t crit: +-2.03
 	>>> Reject Ho
-	>>> CI: [2.465, 2.735]
+	>>> CI: [2.465, 2.735]	
