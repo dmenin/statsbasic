@@ -45,8 +45,8 @@ There is also a good chance that the functions are not 100% complete because Iâ€
     >>> dfObs = sb.CreateAnovaDataFrame(labels, data)
     >>> sb.AnovaOneWay(dfObs)
 
-	![Anova1](/statsbasic/examples/Anova1.png)
-	![Anova2](/statsbasic/examples/Anova2.png)
+![Anova1](/statsbasic/examples/Anova1.png)
+![Anova2](/statsbasic/examples/Anova2.png)
 
 
 ### Chi Square:	
@@ -61,7 +61,7 @@ There is also a good chance that the functions are not 100% complete because Iâ€
     >>> dfObs = pd.DataFrame(data=data[1:,1:], index=data[1:,0], columns=data[0,1:]).apply(pd.to_numeric,axis=0)
     >>> sb.ChiSquare_test(dfObs, debug=True)
 	
-	![Anova2](/statsbasic/examples/chisquare.png)	
+![Anova2](/statsbasic/examples/chisquare.png)	
 
 ### One Sample T-Test:		
 
