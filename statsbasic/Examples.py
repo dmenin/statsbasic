@@ -96,7 +96,7 @@
 
 
 ##Ex 6 pag43
-sb.T_test_TwoInDependentSamples(xbar_A = 75.509, xbar_B= 78.373, StDev_A= 2.054, StDev_B= 1.635, nA =11, nB =11, alpha = 0.05, tail='two')
+#sb.T_test_TwoInDependentSamples(xbar_A = 75.509, xbar_B= 78.373, StDev_A= 2.054, StDev_B= 1.635, nA =11, nB =11, alpha = 0.05, tail='two')
 #
 ##2.4.1 pag 48
 #T_test_TwoInDependentSamples(xbar_A = 25.32, xbar_B= 31.96, StDev_A= 13.78, StDev_B= 12.05, nA = 25, nB = 25, alpha = 0.05, tail='two')
