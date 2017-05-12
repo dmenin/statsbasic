@@ -2,6 +2,30 @@ import numpy as np
 import pandas as pd
 import statsbasic as sdt
 
+##############################2016 repeat
+#1)
+#c:
+sdt.T_test_TwoInDependentSamples(7, 5, 1.25, 2, 5, 2, 0.05)
+
+#d:
+sdt.T_test_OneSample(7, 6, 0.75, 5, 0.05,'one', 'lower')
+
+#2)
+sdt.CountData_TwoInDependentSamples(0.592, 0.407, 1, 163, 112, 0.05)
+
+data = np.array([
+    ['','Ireland','France', 'Germany'],
+    ['18-24',112,163],
+    ['25-39',176,297],
+    ['40-54',185,263],
+    ['50+',100,97]
+])
+dfObs = pd.DataFrame(data=data[1:,1:], index=data[1:,0],    columns=data[0,1:]).apply(pd.to_numeric,axis=0)
+sdt.ChiSquare_test(dfObs, debug=True)
+
+
+
+
 #############################2016 exam
 #1)
 sdt.T_test_OneSample(2.9, 2.6, 0.4, 36, 0.05)

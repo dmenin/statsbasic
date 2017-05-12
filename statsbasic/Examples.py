@@ -1,58 +1,53 @@
-#import statsbasic as sb
-#from scipy import stats
-#Examples:
-#####################################T_test_OneSample
+import statsbasic as sb
+from scipy import stats
+import numpy as np
+####################################T_test_OneSample
 
-##Exercise 2.1.1 Pag 14
-##Head1:
-#T_test_OneSample(mu = 21, xbar = 21.06 , S = 0.118, n = 10, alpha = 0.05, tail = 'two')
-#
-##Head2:
-#T_test_OneSample(mu = 21, xbar = 21.33 , S = 0.36, n = 10, alpha = 0.05, tail = 'two')
-#
-#
-##Example 3 Pag 16:
-#T_test_OneSample(mu = 90, xbar = 87.9, S = 2.4, n = 5, alpha = 0.05, tail = 'one', direction = 'lower')
-#
-#
-##Homework Questions
-##1
-#T_test_OneSample(mu = 4, xbar = 5.77, S = 1.572, n = 16, alpha = 0.05, tail = 'two')
+#Exercise 2.1.1 Pag 14
+#Head1:
+sb.T_test_OneSample(mu = 21, xbar = 21.06 , S = 0.118, n = 10, alpha = 0.05, tail = 'two')
 
-#T_test_OneSample(mu = 5, xbar = 6, S = 1, n = 10, alpha = 0.05, tail = 'two')
-#
-#tt = (xbar - mu)/np.sqrt(S/float(n))  # t-statistic for mean
-#pval = stats.t.sf(np.abs(tt), n-1)*2  # two-sided pvalue = Prob(abs(t)>tt)
-#print 't-statistic = %6.3f pvalue = %6.4f' % (tt, pval)
-#t-statistic =  0.391 pvalue = 0.6955
+#Head2:
+sb.T_test_OneSample(mu = 21, xbar = 21.33 , S = 0.36, n = 10, alpha = 0.05, tail = 'two')
+
+
+#Example 3 Pag 16:
+sb.T_test_OneSample(mu = 90, xbar = 87.9, S = 2.4, n = 5, alpha = 0.05, tail = 'one', direction = 'lower')
+
+
+#Homework Questions
+#1
+sb.T_test_OneSample(mu = 4, xbar = 5.77, S = 1.572, n = 16, alpha = 0.05, tail = 'two')
+
+sb.T_test_OneSample(mu = 5, xbar = 6, S = 1, n = 10, alpha = 0.05, tail = 'two')
 
 
 
 
-#
-##2
-#T_test_OneSample(mu = 12.5, xbar = 12.75, S = 4.3, n = 100, alpha = 0.05, tail = 'one', direction = 'upper')
-#
-##4
-#T_test_OneSample(mu = 72, xbar = 70.4211, S = 9.9480, n = 57, alpha = 0.05, tail = 'two')
-#
-#
-##5
-#T_test_OneSample(mu = 3, xbar = 3.8, S = 1.5, n = 15, alpha = 0.05, tail = 'one', direction = 'upper')
-#
-##6
-#T_test_OneSample(mu = 16803, xbar = 15800, S = 2600, n = 30, alpha = 0.05, tail = 'one', direction = 'lower')
-#
-#
-##7
-#obs = [2.1, 1.4, 1.3, 1.9, 1.5]
-#xbar = np.mean(obs)
-#S = np.std(obs, ddof=1) #SAMPLE STANDAR DEVIATION
-#T_test_OneSample(mu = 2, xbar = xbar, S = S, n = 5, alpha = 0.1, tail = 'two')
-#
-#
-##8
-#T_test_OneSample(mu = 24300, xbar = 26000 , S = 4200, n = 26, alpha = 0.05, tail = 'two')
+
+#2
+sb.T_test_OneSample(mu = 12.5, xbar = 12.75, S = 4.3, n = 100, alpha = 0.05, tail = 'one', direction = 'upper')
+
+#4
+sb.T_test_OneSample(mu = 72, xbar = 70.4211, S = 9.9480, n = 57, alpha = 0.05, tail = 'two')
+
+
+#5
+sb.T_test_OneSample(mu = 3, xbar = 3.8, S = 1.5, n = 15, alpha = 0.05, tail = 'one', direction = 'upper')
+
+#6
+sb.T_test_OneSample(mu = 16803, xbar = 15800, S = 2600, n = 30, alpha = 0.05, tail = 'one', direction = 'lower')
+
+
+#7
+obs = [2.1, 1.4, 1.3, 1.9, 1.5]
+xbar = np.mean(obs)
+S = np.std(obs, ddof=1) #SAMPLE STANDAR DEVIATION
+sb.T_test_OneSample(mu = 2, xbar = xbar, S = S, n = 5, alpha = 0.1, tail = 'two')
+
+
+#8
+sb.T_test_OneSample(mu = 24300, xbar = 26000 , S = 4200, n = 26, alpha = 0.05, tail = 'two')
 
 
 

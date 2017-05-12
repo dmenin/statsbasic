@@ -173,11 +173,11 @@ def CountData_TwoInDependentSamples(pYes1, pYes2, pYesTotal, n1, n2, alpha):
     print """The interval suggests that the difference between population proportions is between %s and %s 
               """ %("{0:.0f}%".format(lCI*100) , "{0:.0f}%".format(uCI*100) )
     
-    if lCI >0:
-        print 'Interval does not contain 0, therefore there was a significant impact'
-    else:
-        print 'Interval contains 0, therefore there was not a significant impact'
-    
+#    if lCI >0:
+#        print 'Interval does not contain 0, therefore there was a significant impact'
+#    else:
+#        print 'Interval contains 0, therefore there was not a significant impact'
+#    
     print ''
     
     #Because pi (pop proportion) is unknown it must be estimated from the sample data.  
