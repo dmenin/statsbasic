@@ -6,8 +6,8 @@ def readme():
 
 setup(name='statsbasic',
       version='0.1',
-      description='Run Basic Statistical Test with o lot of output - emphasys on Learning',
-      url='http://github.com/',
+      description='Run Basic Statistical Test with lots of output - emphasys on Learning',
+      url='https://github.com/dmenin/statsbasic',
       author='Diego',
       author_email='dmenin@gmail.com',
       license='MIT',
