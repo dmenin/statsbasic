@@ -11,18 +11,27 @@ sdt.T_test_TwoInDependentSamples(7, 5, 1.25, 2, 5, 2, 0.05)
 sdt.T_test_OneSample(7, 6, 0.75, 5, 0.05,'one', 'lower')
 
 #2)
+#b
 sdt.CountData_TwoInDependentSamples(0.592, 0.407, 1, 163, 112, 0.05)
 
+#d
 data = np.array([
     ['','Ireland','France', 'Germany'],
-    ['18-24',112,163],
-    ['25-39',176,297],
-    ['40-54',185,263],
-    ['50+',100,97]
+    ['18-24',112,176,100],
+    ['25-39',163,297,97],
+    ['40-54',135,315,222]
 ])
 dfObs = pd.DataFrame(data=data[1:,1:], index=data[1:,0],    columns=data[0,1:]).apply(pd.to_numeric,axis=0)
 sdt.ChiSquare_test(dfObs, debug=True)
 
+#e
+data = np.array([
+    ['','Ireland','France'],
+    ['18-24',112,176],
+    ['25-39',163,297]
+])
+dfObs = pd.DataFrame(data=data[1:,1:], index=data[1:,0],    columns=data[0,1:]).apply(pd.to_numeric,axis=0)
+sdt.ChiSquare_test(dfObs, debug=True)
 
 
 
