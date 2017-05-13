@@ -181,7 +181,8 @@ def CountData_TwoInDependentSamples(pYes1, pYes2, pYesTotal, n1, n2, alpha):
     print ''
     
     #Because pi (pop proportion) is unknown it must be estimated from the sample data.  
-    #If there is no group difference (Ho) then a natural estimator is the overall sample proportion of patients who become cured 
+    #If there is no group difference (Ho) then a natural estimator is the overall 
+    #sample proportion of patients who become cured 
     estimatedSE = np.sqrt(
                    ((pYesTotal * (1-pYesTotal))/n1) + 
                    ((pYesTotal * (1-pYesTotal))/n2) 
