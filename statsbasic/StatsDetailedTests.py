@@ -138,8 +138,8 @@ def CountDataSimpleTest (n, p, alpha=0.05):
 
 
 #3.2 Simple Comparative Studies  - INDEPENDENT TESTS
-#The statistical problem is to assess the extent to which observed sample differences are likely to be systematic 
-#and not simply due to chance variation.
+#The statistical problem is to assess the extent to which observed sample differences
+#are likely to be systematic and not simply due to chance variation.
 
 #The statistical questions that we typically wish to address are whether or not the population or 
 #process proportions are the same and, if there is a difference, how big is that difference?

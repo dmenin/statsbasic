@@ -12,7 +12,15 @@ sb.T_test_OneSample(7, 6, 0.75, 5, 0.05,'one', 'lower')
 
 #2)
 #b
-sb.CountData_TwoInDependentSamples(0.592, 0.407, 1, 163, 112, 0.05)
+sb.CountData_TwoInDependentSamples(0.4, 0.27, 0.67, 163, 112, 0.05)
+
+#c)
+pYes1 = 0.4
+pYes2 = 0.53
+pYesTotal=1
+n1=788
+n2=419
+sb.CountData_TwoInDependentSamples(0.53, 0.4, 0.44, 419,788, 0.05)
 
 #d
 data = np.array([
@@ -57,14 +65,18 @@ sb.AnovaOneWay(dfObs)
 
 #############################2016 exam
 #1)
-sb.T_test_OneSample(2.9, 2.6, 0.4, 36, 0.05)
+sb.T_test_OneSample(2.9, 2.6, 0.4, 36, 0.05, 'one', 'lower')
 
-sb.T_test_OneSample(2.9, 2.85, 0.0989, 36, 0.05)
+sb.T_test_OneSample(2.9, 2.85, 0.0644, 36, 0.05)
 
 #if it was divide by 4, not 16:
 sb.T_test_OneSample(2.9, 2.85, np.sqrt(0.1565/4), 36, 0.05)
 
 #2)
+#b)
+sb.CountData_TwoInDependentSamples(0.39,0.4,0.395,100,100,0.05)
+
+#c)    
 data = np.array([
     ['','Men','Woman'],
     ['Rare',39,40],
@@ -202,7 +214,9 @@ dfObs = sb.CreateAnovaDataFrame(labels, data)
 #stats.f_oneway(data[0],data[1],data[2],data[3])
 sb.AnovaOneWay(dfObs)
     
-reload(sdt)
+
+
+
 #Chapter 2 Suplementary Exercises:
     
 #1) 
