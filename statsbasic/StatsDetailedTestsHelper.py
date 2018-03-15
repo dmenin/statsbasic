@@ -24,7 +24,7 @@ def GetT_Crit(alpha, df, tail, direction='none', debug=True):
     
     t_crit = round(t_crit,2)
     if debug:
-        print 't crit:', auxlabel +str(t_crit)
+        print ('t crit:', auxlabel +str(t_crit))
     return t_crit
     
 
@@ -42,31 +42,31 @@ def GetF_Crit(alpha, dfn, dfd, tail, direction='none', debug=True):
     
     f_crit = round(f_crit,2)
     if debug:
-        print 'FCrit:', auxlabel +str(f_crit)
+        print ('FCrit:', auxlabel +str(f_crit))
     return f_crit
 
 def InterpretT_Stat(t_crit, t_stat, tail, direction='none'):
     if tail =='two':
         #if two tails; t-crit will always be positive because Im doing alpha -1
         if t_stat < t_crit * -1 or t_stat > t_crit:
-            print 'Reject Ho'
+            print ('Reject Ho')
         else:
-            print 'Cannot reject Ho'
+            print ('Cannot reject Ho')
     elif tail == 'one':
         if direction == 'upper':
             if t_stat > t_crit:
-                print 'Upper tail test; t-stat > t-crit : Reject Ho'
+                print ('Upper tail test; t-stat > t-crit : Reject Ho')
             else:
-                print 'Upper tail test; t-stat < t-crit : Cannot Reject Ho'
+                print ('Upper tail test; t-stat < t-crit : Cannot Reject Ho')
         elif direction == 'lower':
             if t_stat < t_crit:
-                print 'Lower tail test; t-stat < t-crit : Reject Ho'
+                print ('Lower tail test; t-stat < t-crit : Reject Ho')
             else:
-                print 'Lower tail test; t-stat > t-crit : Cannot Reject Ho'
+                print ('Lower tail test; t-stat > t-crit : Cannot Reject Ho')
         else:
-            print 'direction parameter has to be "upper" or "lower"'
+            print ('direction parameter has to be "upper" or "lower"')
     else:
-        print 'tail parameter has to be "two" or "one"'
+        print ('tail parameter has to be "two" or "one"')
 
 
 def CalculateCI(t_crit, x_bar, SE_xbar):
@@ -77,7 +77,7 @@ def CalculateCI(t_crit, x_bar, SE_xbar):
     #4) CI:
     CI_lower = round( x_bar - (t_crit * SE_xbar) , 3)
     CI_upper = round( x_bar + (t_crit * SE_xbar) , 3)
-    print 'CI:',  [CI_lower, CI_upper]
+    print ('CI:',  [CI_lower, CI_upper])
     return CI_lower, CI_upper
 
     
@@ -116,20 +116,20 @@ def CreateAnovaDataFrame(labels, data):
 def AnovaOneWayCompareMeans(dfObs, possibleCombs, dfError, MSError, I, useBonferroniCorrection = False):
 
     if useBonferroniCorrection:
-        print 'Bonferroni Correction (alpha\m) @:', str(round(0.05/possibleCombs,6))
+        print ('Bonferroni Correction (alpha\m) @:', str(round(0.05/possibleCombs,6)))
         lsdTCrit = GetT_Crit(0.05/possibleCombs,dfError,'two', debug=False)
-        print 'T Critical: %s - using %s degrees of freedom (Error df)' %(lsdTCrit, dfError)
+        print ('T Critical: %s - using %s degrees of freedom (Error df)' %(lsdTCrit, dfError))
     else:
         lsdTCrit = GetT_Crit(0.05,dfError,'two', debug=False)
-        print 'T Critical: %s - using %s degrees of freedom (Error df)' %(lsdTCrit, dfError)
+        print ('T Critical: %s - using %s degrees of freedom (Error df)' %(lsdTCrit, dfError))
      
-    print 'MSError: {}, I: {}'.format(str(MSError), str(I))
+    print ('MSError: {}, I: {}'.format(str(MSError), str(I)))
     lsd = round(lsdTCrit  *  np.sqrt((2 * MSError) / I) , 2)
-    print 'LSD :', str(lsd)
+    print ('LSD :', str(lsd))
 
     
-    print ''
-    print'Below, the results are shown in ascending order of magnitude and a line is drawn under pairs of means that do not differ by at least %s, i.e., that are not statistically significantly different.' %lsd
+    print ('')
+    print ('Below, the results are shown in ascending order of magnitude and a line is drawn under pairs of means that do not differ by at least %s, i.e., that are not statistically significantly different.' %lsd)
     
     #this is a little of an overkill, but I guess is the simplest way of achiving the result I want
     meansDict = {}
@@ -151,4 +151,4 @@ def AnovaOneWayCompareMeans(dfObs, possibleCombs, dfError, MSError, I, useBonfer
     l1 += str(meansList[i+1][0])
     l2 += "%.2f" %  meansList[i+1][1]
     l3 += '|'    
-    print l1,'\n', l2,'\n',l3
+    print (l1,'\n', l2,'\n',l3)
